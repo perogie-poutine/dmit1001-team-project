@@ -66,49 +66,27 @@ ul.flex-container{
 }
 
 /* Bouncing DVD Logo */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+body {
+  overflow: hidden;
 }
 
-html,
-body{
-  height:100%;
+#logo {
+  width: 20vmax;
+  max-width: 250px;
+  height: auto;
+  position: absolute;
+  z-index: -1;
+  visibility: hidden;
 }
 
-body{
-
-  overflow:hidden;
-}
-
-img{
-  display:block;
-  max-width:100%;
-}
-
-svg{
-  width:150px;
-  animation:rainbow 8s infinite ease;
-  position:absolute;
-  transition: 100ms linear;
-  
-}
-
-@keyframes rainbow{
-  0%{
-    fill:hsl(220, 70%, 50%);
-  }
-  25%{
-    fill:hsl(120, 70%, 50%);
-  }
-  50%{
-    fill:hsl(20, 70%, 50%);
-  }
-  75%{
-    fill:hsl(300, 70%, 50%);
-  }
-  100%{
-    fill:hsl(220, 70%, 50%);
-  }
+.scanlines {
+  --scan-height: 2px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(4px);
+  opacity: 0.25;
+  background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.2) calc(var(--scan-height) * 1), rgba(255, 255, 255, 0.2) calc(var(--scan-height) * 2), rgba(255, 255, 255, 0.1) calc(var(--scan-height) * 2), rgba(255, 255, 255, 0.1) calc(var(--scan-height) * 3));
 }
