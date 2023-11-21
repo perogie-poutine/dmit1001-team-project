@@ -66,27 +66,49 @@ ul.flex-container{
 }
 
 /* Bouncing DVD Logo */
-body {
-  margin: 0;
-  box-sizing: border-box;
-  overflow: hidden;
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
-#black {
-  height: 100vh;
-  width: 100vw;
-  background-color: #111;
+html,
+body{
+  height:100%;
 }
 
-#dvd {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  height: 50px;
-  width: 100px;
-  mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
-  -webkit-mask: url("https://upload.wikimedia.org/wikipedia/commons/9/9b/DVD_logo.svg");
-  background-repeat: no-repeat;
-  background-size: 75px;
-  background-position: center;
+body{
+
+  overflow:hidden;
+}
+
+img{
+  display:block;
+  max-width:100%;
+}
+
+svg{
+  width:150px;
+  animation:rainbow 8s infinite ease;
+  position:absolute;
+  transition: 100ms linear;
+  
+}
+
+@keyframes rainbow{
+  0%{
+    fill:hsl(220, 70%, 50%);
+  }
+  25%{
+    fill:hsl(120, 70%, 50%);
+  }
+  50%{
+    fill:hsl(20, 70%, 50%);
+  }
+  75%{
+    fill:hsl(300, 70%, 50%);
+  }
+  100%{
+    fill:hsl(220, 70%, 50%);
+  }
 }
