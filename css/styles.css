@@ -41,6 +41,10 @@ h4 {
   font-size: 22px;
 }
 
+label {
+  cursor: pointer;
+}
+
 header ul {
   justify-content: left;
   padding-left: 12px;
@@ -57,7 +61,7 @@ main li {
   background: none;
   border: none;
   position: relative;
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 5px 11px 0 rgba(0, 0, 0, 0.2);
   color: #1c1c6b;
   display: block;
   margin-bottom: 10px;
@@ -142,7 +146,6 @@ main li {
   opacity: 1;
   top: 0;
 }
-
 
 .hidden-text h3 {
   padding: 10px 0px 0px 15px;
